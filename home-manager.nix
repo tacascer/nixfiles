@@ -13,7 +13,7 @@ in {
 	    extraConfig = {
 	      init = {
 	        defaultBranch = "main";
-	      }
+	      };
 	      gpg = {
 		format = "ssh";
 	      };
@@ -23,9 +23,14 @@ in {
 	      commit = {
 		gpgsign = true;
 	      };
+	      pull = {
+	        rebase = true;
+	      };
 
 	      user = {
-		signingKey = "...";
+	        email = "49887921+tacascer@users.noreply.github.com";
+		user = "tacascer";
+		signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP4F11qhcGezqNnuicjl99tvcXdIeymu0wdPLBivoZEg";
 	      };
 	    };
 	  };
