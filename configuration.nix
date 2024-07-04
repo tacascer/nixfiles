@@ -120,6 +120,13 @@
   # Optimize nix store
   nix.optimise.automatic = true;
 
+  # Enable GC
+  nix.gc = {
+  	automatic = true;
+  	dates = "weekly";
+  	options = "--delete-older-than 30d";
+  };
+
   # Set ENV variables
   environment.variables = {
     EDITOR="nvim";
