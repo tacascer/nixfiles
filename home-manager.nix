@@ -14,6 +14,7 @@ in {
 		};
 	programs.neovim = {
 		enable = true;
+    defaultEditor = true;
 		viAlias = true;
 		vimAlias = true;
 		extraConfig = lib.strings.concatLines [
