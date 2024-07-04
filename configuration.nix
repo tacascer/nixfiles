@@ -13,6 +13,8 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  # Limit the number of generations to keep
+  boot.loader.systemd-boot.configurationLimit = 10;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable flakes
@@ -118,13 +120,13 @@
   ];
 
   # Optimize nix store
-  nix.optimise.automatic = true;
+  nix.settings.auto-optimise-store=true;
 
   # Enable GC
   nix.gc = {
   	automatic = true;
   	dates = "weekly";
-  	options = "--delete-older-than 30d";
+  	options = "--delete-older-than 1w";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
