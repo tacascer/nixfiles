@@ -11,7 +11,7 @@ in {
       Host *
         IdentityAgent ${onePassPath}
 		'';
-		};
+  };
 	programs.neovim = {
 		enable = true;
     defaultEditor = true;

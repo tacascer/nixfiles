@@ -17,15 +17,14 @@
     in
   {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      # extraSpecialArgs = {inherit home-manager;};
       modules = [
-	./configuration.nix
+        ./configuration.nix
         nixos-hardware.nixosModules.framework-13-7040-amd
-	home-manager.nixosModules.home-manager {
-	  home-manager.useGlobalPkgs = true;	
-	  home-manager.useUserPackages = true;
-	  home-manager.users.tacascer = import ./home-manager.nix;
-	}
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;	
+          home-manager.useUserPackages = true;
+          home-manager.users.tacascer = import ./home.nix;
+        }
       ];
     };
   };
