@@ -3,6 +3,7 @@ let onePassPath = "~/.1password/agent.sock";
 in {
   imports = [
     ./neovim.nix
+    ./zsh.nix 
   ];
 	home = {
 		username = "tacascer";

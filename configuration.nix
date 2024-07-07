@@ -91,9 +91,7 @@
     isNormalUser = true;
     description = "Tim Tran";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    shell = pkgs.zsh;
   };
 
   # Enable automatic login for the user.
@@ -106,6 +104,9 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Enable ZSH
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
