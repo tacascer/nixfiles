@@ -6,8 +6,9 @@
   home.packages = with pkgs; [
     ripgrep
     fd
-    luajitPackages.luarocks
-    luajit
+    tree-sitter
+    lua51Packages.lua
+    lua51Packages.luarocks
   ];
   programs.neovim = {
     enable = true;
