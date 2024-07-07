@@ -1,4 +1,8 @@
 {config, pkgs, lib, ...} : {
+  xdg.configFile.nvim = {
+    source = ./neovim-config;
+    recursive = true;
+  };
   programs.neovim = {
     enable = true;
     defaultEditor = true;

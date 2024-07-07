@@ -7,6 +7,10 @@ in {
 	home = {
 		username = "tacascer";
 		homeDirectory = "/home/tacascer";
+    packages = with pkgs; [
+      xclip
+      clang
+    ];
 	};
 	programs.ssh = {
 		enable = true;
