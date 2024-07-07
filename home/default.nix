@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... } :
 let onePassPath = "~/.1password/agent.sock";
 in {
+  imports = [
+    ./neovim.nix
+  ];
 	home = {
 		username = "tacascer";
 		homeDirectory = "/home/tacascer";
@@ -12,17 +15,6 @@ in {
         IdentityAgent ${onePassPath}
 		'';
   };
-	programs.neovim = {
-		enable = true;
-    defaultEditor = true;
-		viAlias = true;
-		vimAlias = true;
-		extraConfig = lib.strings.concatLines [
-      "set tabstop=2 shiftwidth=2"
-      "set expandtab"
-      "set autoindent"
-    ];
-	};
   programs.git = {
     enable = true;
     extraConfig = {
