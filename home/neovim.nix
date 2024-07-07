@@ -9,6 +9,7 @@
     tree-sitter
     lua51Packages.lua
     lua51Packages.luarocks
+    lua-language-server
   ];
   programs.neovim = {
     enable = true;
