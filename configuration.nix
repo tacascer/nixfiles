@@ -119,6 +119,11 @@
   #  wget
   ];
 
+  # Configure fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {fonts = ["Meslo"];})
+  ];
+
   # Optimize nix store
   nix.settings.auto-optimise-store=true;
 
