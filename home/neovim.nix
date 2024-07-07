@@ -3,6 +3,10 @@
     source = ./neovim-config;
     recursive = true;
   };
+  home.packages = with pkgs; [
+    ripgrep
+    fd
+  ];
   programs.neovim = {
     enable = true;
     defaultEditor = true;
