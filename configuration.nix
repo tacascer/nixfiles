@@ -116,7 +116,8 @@
     neovim
     fastfetch
     gitFull
-  #  wget
+    wget
+    unzip
   ];
 
   # Configure fonts

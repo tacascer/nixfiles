@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     ripgrep
     fd
+    luajitPackages.luarocks
   ];
   programs.neovim = {
     enable = true;
@@ -18,4 +19,5 @@
       "set autoindent"
     ];
   };
+  programs.lazygit.enable = true;
 }
