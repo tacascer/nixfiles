@@ -1,5 +1,5 @@
 {config, pkgs, lib, ...} : {
-  xdg.configFile.nvim = {
+  home.file.".config/nvim" = {
     source = ./neovim-config;
     recursive = true;
   };
