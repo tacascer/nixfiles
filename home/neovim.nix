@@ -4,16 +4,16 @@
     recursive = true;
   };
   home.packages = with pkgs; [
-    ripgrep
     fd
-    nixd
-    tree-sitter
-    luajit
-    luajitPackages.luarocks
-    luajitPackages.jsregexp
-    lua-language-server
-    stylua
     fish
+    lua-language-server
+    luajit
+    luajitPackages.jsregexp
+    luajitPackages.luarocks
+    nixd
+    ripgrep
+    stylua
+    tree-sitter
   ];
   programs.neovim = {
     enable = true;
