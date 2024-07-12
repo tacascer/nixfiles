@@ -1,4 +1,4 @@
-{pkgs, ...} : {
+{ pkgs, ... }: {
   home.file.".config/nvim" = {
     source = ./neovim-config;
     recursive = true;
@@ -11,7 +11,9 @@
     luajitPackages.jsregexp
     luajitPackages.luarocks
     nixd
+    nixfmt
     ripgrep
+    shfmt
     stylua
     tree-sitter
   ];

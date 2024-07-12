@@ -22,7 +22,15 @@ return {
             },
           },
         },
-        nixd = {},
+        nixd = {
+          settings = {
+            nixd = {
+              formatting = {
+                command = { "nixfmt" },
+              },
+            },
+          },
+        },
       },
     },
   },
