@@ -1,4 +1,4 @@
-{config, pkgs, lib, ...} : {
+{pkgs, ...} : {
   home.file.".config/nvim" = {
     source = ./neovim-config;
     recursive = true;
@@ -6,10 +6,14 @@
   home.packages = with pkgs; [
     ripgrep
     fd
+    nixd
     tree-sitter
-    lua51Packages.lua
-    lua51Packages.luarocks
+    luajit
+    luajitPackages.luarocks
+    luajitPackages.jsregexp
     lua-language-server
+    stylua
+    fish
   ];
   programs.neovim = {
     enable = true;
