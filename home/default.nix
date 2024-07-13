@@ -3,7 +3,7 @@
   home = {
     username = "tacascer";
     homeDirectory = "/home/tacascer";
-    packages = with pkgs; [ xclip clang ];
+    packages = with pkgs; [ clang just ];
   };
   programs.ssh = { enable = true; };
   programs.git = {

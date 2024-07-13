@@ -16,6 +16,7 @@
     shfmt
     stylua
     tree-sitter
+    xclip
   ];
   programs.neovim = {
     enable = true;
