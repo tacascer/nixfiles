@@ -1,52 +1,20 @@
-{ config, pkgs, lib, ... } :
-let onePassPath = "~/.1password/agent.sock";
-in {
-  imports = [
-    ./neovim.nix
-    ./zsh.nix 
-  ];
-	home = {
-		username = "tacascer";
-		homeDirectory = "/home/tacascer";
-    packages = with pkgs; [
-      xclip
-      clang
-    ];
-	};
-
-	programs.ssh = {
-		enable = true;
-		extraConfig = ''
-      Host *
-        IdentityAgent ${onePassPath}
-		'';
+{ pkgs, ... }: {
+  imports = [ ./neovim.nix ./zsh.nix ./1password.nix ];
+  home = {
+    username = "tacascer";
+    homeDirectory = "/home/tacascer";
+    packages = with pkgs; [ xclip clang ];
   };
+  programs.ssh = { enable = true; };
   programs.git = {
     enable = true;
     extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-      gpg = {
-        format = "ssh";
-      };
-      "gpg \"ssh\"" = {
-        program = "${lib.getExe' pkgs._1password-gui "op-ssh-sign"}";
-      };
-      commit = {
-        gpgsign = true;
-      };
-      pull = {
-        rebase = true;
-      };
-      user = {
-        email = "49887921+tacascer@users.noreply.github.com";
-        user = "tacascer";
-        signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP4F11qhcGezqNnuicjl99tvcXdIeymu0wdPLBivoZEg";
-      };
+      init = { defaultBranch = "main"; };
+      gpg = { format = "ssh"; };
+      pull = { rebase = true; };
     };
   };
-	home.stateVersion = "24.05";
-	# Let home Manager install and manage itself.
-	programs.home-manager.enable = true;
+  home.stateVersion = "24.05";
+  # Let home Manager install and manage itself.
+  programs.home-manager.enable = true;
 }
