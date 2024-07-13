@@ -6,11 +6,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
-      full-update = "nix flake update && sudo nixos-rebuild switch";
-    };
+    shellAliases = { };
 
     history = {
       size = 10000;
