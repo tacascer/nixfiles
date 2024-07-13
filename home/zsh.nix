@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  home.packages = with pkgs; [ thefuck ];
+  home.packages = with pkgs; [ thefuck zsh-powerlevel10k meslo-lgs-nf ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -13,10 +13,22 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
+    plugins = [
+      {
+        name = "powerlevel10k-config";
+        src = ./zsh-config;
+        file = ".p10k.zsh";
+      }
+      {
+        name = "zsh-powerlevel10k";
+        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
+        file = "powerlevel10k.zsh-theme";
+      }
+    ];
+
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "thefuck" ];
-      theme = "agnoster";
     };
   };
 }
