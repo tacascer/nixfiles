@@ -5,11 +5,10 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./1password.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./1password.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -114,26 +113,26 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
     fastfetch
     gitFull
-    wget
+    neovim
+    spotify
+    signal-desktop
     unzip
+    wget
   ];
 
   # Configure fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Meslo"];})
-  ];
+  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "Meslo" ]; }) ];
 
   # Optimize nix store
-  nix.settings.auto-optimise-store=true;
+  nix.settings.auto-optimise-store = true;
 
   # Enable GC
   nix.gc = {
-  	automatic = true;
-  	dates = "weekly";
-  	options = "--delete-older-than 1w";
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
