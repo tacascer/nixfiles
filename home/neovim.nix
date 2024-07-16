@@ -17,6 +17,7 @@
     ripgrep
     rust-analyzer
     rustc
+    rustfmt
     shfmt
     stylua
     tree-sitter
