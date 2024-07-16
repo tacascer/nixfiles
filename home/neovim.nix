@@ -4,6 +4,7 @@
     recursive = true;
   };
   home.packages = with pkgs; [
+    cargo
     fd
     fish
     lua-language-server
@@ -14,6 +15,8 @@
     nixfmt
     nodejs
     ripgrep
+    rust-analyzer
+    rustc
     shfmt
     stylua
     tree-sitter
