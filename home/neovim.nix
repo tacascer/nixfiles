@@ -12,6 +12,7 @@
     luajitPackages.luarocks
     nixd
     nixfmt
+    nodejs
     ripgrep
     shfmt
     stylua
