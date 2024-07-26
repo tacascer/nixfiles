@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./neovim.nix ./zsh.nix ./1password.nix ];
+  imports = [ ./neovim.nix ./zsh.nix ./1password.nix ./discord.nix ];
   home = {
     username = "tacascer";
     homeDirectory = "/home/tacascer";
