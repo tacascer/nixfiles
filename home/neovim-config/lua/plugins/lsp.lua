@@ -22,15 +22,8 @@ return {
             },
           },
         },
-        nixd = {
-          settings = {
-            nixd = {
-              formatting = {
-                command = { "nixfmt" },
-              },
-            },
-          },
-        },
+        nixd = {},
+        taplo = {},
       },
     },
   },

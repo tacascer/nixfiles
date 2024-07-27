@@ -20,6 +20,7 @@
     rustfmt
     shfmt
     stylua
+    taplo
     tree-sitter
     xclip
   ];

@@ -5,6 +5,7 @@ return {
       formatters_by_ft = {
         nix = { "nixfmt" },
         rust = { "rustfmt" },
+        toml = { "taplo" },
       },
     },
   },
