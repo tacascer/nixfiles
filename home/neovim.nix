@@ -23,6 +23,7 @@
     taplo
     tree-sitter
     xclip
+    yarn
   ];
   programs.neovim = {
     enable = true;
