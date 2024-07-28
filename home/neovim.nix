@@ -11,7 +11,7 @@
     luajit
     luajitPackages.jsregexp
     luajitPackages.luarocks
-    nixd
+    nil
     nixfmt
     nodejs
     ripgrep
@@ -22,6 +22,7 @@
     stylua
     taplo
     tree-sitter
+    vscode-js-debug
     xclip
     yarn
   ];
