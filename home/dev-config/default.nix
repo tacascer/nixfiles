@@ -1,1 +1,1 @@
-{ pkgs, ... }: { imports = [ ./java.nix ]; }
+{ pkgs, ... }: { imports = [ ./jvm.nix ./js.nix ]; }
