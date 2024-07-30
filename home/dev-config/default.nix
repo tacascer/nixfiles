@@ -1,1 +1,1 @@
-{ pkgs, ... }: { imports = [ ./jvm.nix ./js.nix ]; }
+{ pkgs, ... }: { imports = [ ./jvm.nix ./js.nix ./rust.nix ]; }
