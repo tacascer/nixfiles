@@ -26,7 +26,6 @@
     enable = true;
     defaultEditor = true;
     viAlias = true;
-    vimAlias = true;
   };
   programs.lazygit.enable = true;
 }
