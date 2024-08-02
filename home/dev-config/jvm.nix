@@ -1,8 +1,9 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    temurin-bin
     gradle
+    jdt-language-server
     kotlin-language-server
     ktlint
+    temurin-bin
   ];
 }
